@@ -1,0 +1,13 @@
+{% extends "/home/ajink7/django3/django5/templates/base.html" %}
+
+{% block body_block %}
+  <div class="jumbotron">
+    {% if user.is_authenticated %}
+    <h1>Welcome to django </h1>
+    <h1>{{ user.username }}</h1>
+    {% else %}
+    <h1>Welcome to django</h1>
+    {% endif %}
+  </div>
+
+{% endblock %}

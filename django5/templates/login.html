@@ -1,0 +1,17 @@
+{% extends '/home/ajink7/django3/django5/templates/base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+
+  <form  method="post" action="{% url 'app5:user_login' %}" >
+    {% csrf_token %}
+    <label for="username">Username</label>
+    <input type="text" name="username" value="">
+    <label for="password">Password</label>
+    <input type="password" name="password" value="">
+
+    <input type="submit" name="" value="Login">
+  </form>
+
+</div>
+
+{% endblock %}
